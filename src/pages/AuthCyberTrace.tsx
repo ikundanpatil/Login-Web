@@ -227,9 +227,6 @@ export default function AuthCyberTrace() {
                     )}
                   </Button>
 
-                  <p className="text-xs text-muted-foreground">
-                    By continuing, you acknowledge monitored access policies.
-                  </p>
                 </form>
               </TabsContent>
 
