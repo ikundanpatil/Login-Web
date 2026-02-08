@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
-import { Shield, Lock, Mail, User, Building2, Loader2 } from "lucide-react";
+import { Lock, Mail, User, Building2, Loader2 } from "lucide-react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
@@ -342,6 +342,32 @@ export default function AuthCyberTrace() {
                 </form>
               </TabsContent>
             </Tabs>
+
+            <div className="mt-6 text-center text-sm text-muted-foreground">
+              {activeTab === "login" ? (
+                <>
+                  Don&apos;t have an account?{" "}
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab("signup")}
+                    className="text-primary underline-offset-4 hover:underline"
+                  >
+                    Sign up
+                  </button>
+                </>
+              ) : (
+                <>
+                  Already have an account?{" "}
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab("login")}
+                    className="text-primary underline-offset-4 hover:underline"
+                  >
+                    Login
+                  </button>
+                </>
+              )}
+            </div>
           </div>
         </Card>
       </main>
