@@ -139,16 +139,9 @@ export default function AuthCyberTrace() {
       <main className="relative mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4 py-10">
         <Card className="w-full max-w-md border-border/80 bg-card/80 shadow-panel backdrop-blur animate-enter">
           <div className="p-6 sm:p-7">
-            <header className="mb-6">
-              <div className="flex items-center justify-center gap-3">
-                <div className="grid h-11 w-11 place-items-center rounded-lg border border-primary/25 bg-background/40 shadow-glow">
-                  <Shield className="h-6 w-6 text-primary" aria-hidden="true" />
-                </div>
-                <div className="text-center">
-                  <h1 className="text-2xl font-semibold tracking-wide">CyberTrace</h1>
-                  <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
-                </div>
-              </div>
+            <header className="mb-6 text-center">
+              <h1 className="text-2xl font-semibold tracking-wide">CyberTrace</h1>
+              <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
             </header>
 
             <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "login" | "signup")}>
