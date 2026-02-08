@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* CyberTrace — Light gradient theme (HSL only) */
-    --background: 240 33% 99%;
+    /* CyberTrace — Light clean theme (HSL only) */
+    --background: 0 0% 100%;
     --foreground: 232 34% 14%;
 
     --card: 0 0% 100%;
@@ -18,44 +18,43 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 232 34% 14%;
 
-    /* Indigo/Violet primary like the reference */
-    --primary: 252 84% 58%;
+    /* Bright green primary like the reference */
+    --primary: 152 72% 38%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 246 45% 95%;
+    --secondary: 240 12% 96%;
     --secondary-foreground: 232 34% 14%;
 
-    --muted: 246 45% 95%;
+    --muted: 240 12% 96%;
     --muted-foreground: 234 16% 40%;
 
-    --accent: 246 55% 94%;
+    --accent: 240 14% 95%;
     --accent-foreground: 232 34% 14%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 18% 88%;
-    --input: 240 18% 88%;
-    --ring: 252 84% 58%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 152 72% 38%;
 
     --radius: 1rem;
 
-    /* Effects */
+    /* Subtle clean backdrop (no heavy gradients) */
     --gradient-cyber:
-      radial-gradient(900px circle at 18% 22%, hsl(250 95% 70% / 0.55), transparent 55%),
-      radial-gradient(700px circle at 55% 18%, hsl(210 95% 70% / 0.50), transparent 58%),
-      radial-gradient(900px circle at 82% 68%, hsl(265 95% 72% / 0.45), transparent 60%),
-      linear-gradient(180deg, hsl(240 33% 99%), hsl(246 55% 96%));
+      radial-gradient(900px circle at 18% 22%, hsl(152 72% 38% / 0.10), transparent 55%),
+      radial-gradient(900px circle at 82% 68%, hsl(210 95% 55% / 0.08), transparent 60%),
+      linear-gradient(180deg, hsl(0 0% 100%), hsl(240 12% 98%));
 
     /* subtle grid (very light) */
-    --pattern-cyber-grid: linear-gradient(hsl(240 18% 88% / 0.8) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(240 18% 88% / 0.8) 1px, transparent 1px);
+    --pattern-cyber-grid: linear-gradient(hsl(240 10% 90% / 0.8) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(240 10% 90% / 0.8) 1px, transparent 1px);
 
-    --shadow-panel: 0 18px 60px -28px hsl(240 18% 35% / 0.25);
-    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.18), 0 12px 34px -18px hsl(var(--primary) / 0.55);
+    --shadow-panel: 0 18px 60px -28px hsl(240 18% 35% / 0.18);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.18), 0 12px 34px -18px hsl(var(--primary) / 0.45);
     --shadow-glow-strong:
       0 0 0 1px hsl(var(--primary) / 0.22),
-      0 16px 44px -18px hsl(var(--primary) / 0.70);
+      0 16px 44px -18px hsl(var(--primary) / 0.60);
 
     /* Sidebar (keep shadcn tokens coherent) */
     --sidebar-background: 240 33% 99%;
