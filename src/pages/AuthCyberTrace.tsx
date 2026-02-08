@@ -333,9 +333,6 @@ export default function AuthCyberTrace() {
                     )}
                   </Button>
 
-                  <p className="text-xs text-muted-foreground">
-                    Enrollment creates an operator identity for CyberTrace.
-                  </p>
                 </form>
               </TabsContent>
             </Tabs>
