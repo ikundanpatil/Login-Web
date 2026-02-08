@@ -8,7 +8,68 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* CyberTrace — dark-by-default, government-grade palette (HSL only) */
+    /* CyberTrace — Light gradient theme (HSL only) */
+    --background: 240 33% 99%;
+    --foreground: 232 34% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 232 34% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 232 34% 14%;
+
+    /* Indigo/Violet primary like the reference */
+    --primary: 252 84% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 246 45% 95%;
+    --secondary-foreground: 232 34% 14%;
+
+    --muted: 246 45% 95%;
+    --muted-foreground: 234 16% 40%;
+
+    --accent: 246 55% 94%;
+    --accent-foreground: 232 34% 14%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 18% 88%;
+    --input: 240 18% 88%;
+    --ring: 252 84% 58%;
+
+    --radius: 1rem;
+
+    /* Effects */
+    --gradient-cyber:
+      radial-gradient(900px circle at 18% 22%, hsl(250 95% 70% / 0.55), transparent 55%),
+      radial-gradient(700px circle at 55% 18%, hsl(210 95% 70% / 0.50), transparent 58%),
+      radial-gradient(900px circle at 82% 68%, hsl(265 95% 72% / 0.45), transparent 60%),
+      linear-gradient(180deg, hsl(240 33% 99%), hsl(246 55% 96%));
+
+    /* subtle grid (very light) */
+    --pattern-cyber-grid: linear-gradient(hsl(240 18% 88% / 0.8) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(240 18% 88% / 0.8) 1px, transparent 1px);
+
+    --shadow-panel: 0 18px 60px -28px hsl(240 18% 35% / 0.25);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.18), 0 12px 34px -18px hsl(var(--primary) / 0.55);
+    --shadow-glow-strong:
+      0 0 0 1px hsl(var(--primary) / 0.22),
+      0 16px 44px -18px hsl(var(--primary) / 0.70);
+
+    /* Sidebar (keep shadcn tokens coherent) */
+    --sidebar-background: 240 33% 99%;
+    --sidebar-foreground: 232 34% 14%;
+    --sidebar-primary: 252 84% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 246 55% 94%;
+    --sidebar-accent-foreground: 232 34% 14%;
+    --sidebar-border: 240 18% 88%;
+    --sidebar-ring: 252 84% 58%;
+  }
+
+  .dark {
+    /* keep dark mode available, but not default */
     --background: 223 58% 6%;
     --foreground: 210 40% 98%;
 
@@ -18,7 +79,6 @@ All colors MUST be HSL.
     --popover: 223 52% 9%;
     --popover-foreground: 210 40% 98%;
 
-    /* Neon green accent */
     --primary: 142 90% 55%;
     --primary-foreground: 223 60% 6%;
 
@@ -40,7 +100,6 @@ All colors MUST be HSL.
 
     --radius: 0.85rem;
 
-    /* Effects */
     --gradient-cyber: radial-gradient(1200px circle at 20% 10%, hsl(var(--primary) / 0.14), transparent 45%),
       radial-gradient(900px circle at 90% 30%, hsl(210 100% 55% / 0.12), transparent 55%),
       radial-gradient(900px circle at 60% 110%, hsl(220 90% 35% / 0.18), transparent 55%),
@@ -53,7 +112,6 @@ All colors MUST be HSL.
     --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.25), 0 10px 30px -12px hsl(var(--primary) / 0.35);
     --shadow-glow-strong: 0 0 0 1px hsl(var(--primary) / 0.35), 0 16px 44px -14px hsl(var(--primary) / 0.55);
 
-    /* Sidebar (keep shadcn tokens coherent) */
     --sidebar-background: 223 58% 6%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 142 90% 55%;
@@ -62,37 +120,6 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 223 28% 18%;
     --sidebar-ring: 142 90% 55%;
-  }
-
-  /* Optional: if you ever add a light mode switch later */
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -117,3 +144,4 @@ All colors MUST be HSL.
     mask-image: radial-gradient(600px circle at 50% 10%, black 30%, transparent 70%);
   }
 }
+
